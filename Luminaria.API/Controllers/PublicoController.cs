@@ -31,8 +31,8 @@ namespace Luminaria.API.Controllers
             // 1. Preparar los parámetros para el procedimiento
             var parametros = new
             {
-                Categoria = string.IsNullOrWhiteSpace(categoria) ? null : categoria,
-                Busqueda = string.IsNullOrWhiteSpace(busqueda) ? null : busqueda
+                Categoria = string.IsNullOrWhiteSpace(categoria) ? null : categoria.Trim(),
+                Busqueda = string.IsNullOrWhiteSpace(busqueda) ? null : busqueda.Trim()
             };
 
             IEnumerable<PersonajeCatalogoRaw> personajes;
