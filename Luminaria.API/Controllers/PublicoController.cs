@@ -43,7 +43,7 @@ namespace Luminaria.API.Controllers
 
             // 3. Ejecutar y leer ambos resultsets en un solo viaje a la BD
             using (var multi = await conexion.QueryMultipleAsync(
-                "EXEC [dbo].[sp_ObtenerCatálogoPublico] @Categoria, @Busqueda", 
+                "[dbo].[sp_ObtenerCatálogoPublico]", 
                 parametros, 
                 commandType: CommandType.StoredProcedure))
             {
