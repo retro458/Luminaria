@@ -1,0 +1,6 @@
+@Luminaria.API_HostAddress = http://localhost:5012
+
+GET {{Luminaria.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
