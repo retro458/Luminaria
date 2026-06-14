@@ -28,7 +28,10 @@ builder.Services.AddDbContext<LuminariaContext>(options =>
     options.AddPolicy("LuminariaPolicy", policy =>
     {
                 policy.WithOrigins(
-                    
+                    "http://localhost:4321",         // Astro dev
+                    "http://localhost:5173",         
+                    "https://luminarias.nodesv.com",
+                    "https://lumiadmin.nodesv.com"
                     
                 )
               .AllowAnyHeader()
