@@ -158,6 +158,15 @@ namespace Luminaria.API.Controllers
                     ArchivoOrLinkUrl = reader.IsDBNull(6) ? null : reader.GetString(6)
                 });
             }
+            await reader.NextResultAsync();
+            while (await reader.ReadAsync())
+            {           
+                detalle.Frases.Add(new FraseDto
+                {
+                    FraseID = reader.GetInt32(0),
+                    Frase   = reader.GetString(1)
+                });
+            }
 
             await conn.CloseAsync();
             return Ok(RespuestaDto.Ok("Personaje obtenido", detalle));
