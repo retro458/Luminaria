@@ -35,6 +35,7 @@ public class PersonajeDetalleDto
     public List<CategoriaDto> Categorias { get; set; } = [];
     public List<HitoDto> Hitos { get; set; } = [];
     public List<LibroDto> Libros { get; set; } = [];
+    public List<FraseDto> Frases { get; set; } = [];
 }
 
 public class HitoDto
