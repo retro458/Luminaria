@@ -145,6 +145,8 @@ app.UseCors("LuminariaPolicy");
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
+try
+{
 using (var scope = app.Services.CreateScope())
 {
     var context = scope.ServiceProvider.GetRequiredService<LuminariaContext>();
@@ -160,6 +162,11 @@ using (var scope = app.Services.CreateScope())
         context.Usuarios.Add(adminUser);
         context.SaveChanges();
     }
+}
+}
+catch (Exception ex)
+{
+    Console.WriteLine($"Error al crear el usuario de admin: {ex.Message}");
 }
 
 app.Run();

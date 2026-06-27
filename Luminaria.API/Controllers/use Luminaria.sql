@@ -24,3 +24,12 @@ SELECT name
 FROM sys.key_constraints 
 WHERE type = 'PK' AND parent_object_id = OBJECT_ID('dbo.Personajes');
 EXEC sp_ObtenerCatálogoPublico @Categoria = NULL, @Busqueda = 'Ad';
+
+
+EXEC [dbo].[sp_ObtenerCatálogoPublico] 
+    @Categoria = '', 
+    @Busqueda = '';
+
+EXEC sp_ObtenerPersonajeDetalle @PersonajeID = 5;
+
+SELECT * FROM FrasesCelebres WHERE PersonajeID = 5;
