@@ -112,7 +112,8 @@ namespace Luminaria.API.Controllers
                     FechaFallecimiento = DateOnly.FromDateTime(reader.GetDateTime(4)),
                     ResumenBreve = reader.GetString(5),
                     BiografiaContenido = reader.GetString(6),
-                    ImgURL = reader.IsDBNull(7) ? null : reader.GetString(7)
+                    ImgURL = reader.IsDBNull(7) ? null : reader.GetString(7),
+                    ComponenteEspecial = reader.IsDBNull(8) ? null : reader.GetString(8)
                 };
             }
 

@@ -32,6 +32,7 @@ public class PersonajeDetalleDto
     public string ResumenBreve { get; set; } = string.Empty;
     public string BiografiaContenido { get; set; } = string.Empty;
     public string? ImgURL { get; set; }
+    public string? ComponenteEspecial { get; set; }
     public List<CategoriaDto> Categorias { get; set; } = [];
     public List<HitoDto> Hitos { get; set; } = [];
     public List<LibroDto> Libros { get; set; } = [];
